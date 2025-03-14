@@ -188,7 +188,7 @@ else{
       animate = {calculatorAnimator.calculatorOnButton.animate}
       transition={calculatorAnimator.calculatorOnButton.transition}
      exit={calculatorAnimator.calculatorOnButton.exit}
-     onClick = {handleOnCalculatorButton} className=" transition-all duration-300 active:scale-110 px-20 py-2 rounded-full fixed top-[50dvh] left-[18dvw] z-40 bg-gradient-to-b  via-gray-700 text-zinc-50 font-semibold cursor-pointer"> Switch Calculator On</motion.div>
+     onClick = {handleOnCalculatorButton} className=" transition-all duration-300 active:scale-110 px-20 py-1 rounded-full fixed top-[50dvh] left-[13dvw] z-40 bg-gradient-to-b  via-gray-700 text-zinc-50 font-semibold cursor-pointer"> Switch Calculator On</motion.div>
      } 
       <motion.div
       animate = {controlsCalculatorOff}
