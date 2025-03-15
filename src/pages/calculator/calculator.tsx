@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { calculatorAnimator } from "../../components/animations";
 import { FaHistory } from "react-icons/fa";
@@ -18,7 +18,15 @@ export const Calculator = () => {
   // const [prevValue, setPrevValue] = useState<(number | undefined)[]>([]);
   // const [operation, setOperation] = useState<string>("");
 
-  
+  // useEffect(()=>{
+  //   const getItem = localStorage.getItem("prevOnState") 
+  //   const parseItem : boolean = getItem === null ? false : JSON.parse(getItem)
+  //   setOn(parseItem)
+  //     return (
+  //       localStorage.setItem("prevOnState", JSON.stringify(on))
+  //     )
+  //   },[])
+    
 
   const numberClicked = (index: number | string |undefined) => {
    
@@ -162,20 +170,24 @@ const handleOnCalculatorButton = ()=>{
 const handleSwitchOff = ()=>{
   setOn(true)
 }
-if(on === true){
-  controlsCalculatorOff.start({
-    ...calculatorAnimator.calculatorOff.animate,
-    transition: calculatorAnimator.calculatorOff.transition
-  })
-}
-else{
-  controlsCalculatorOff.start({
-    opacity: [0,1],
-    transition: {
-      duration: 1
+useEffect(()=>{
+  if(on === true){
+    console.log("useEffect Ran", on)
+      controlsCalculatorOff.start({
+        ...calculatorAnimator.calculatorOff.animate,
+        transition: calculatorAnimator.calculatorOff.transition
+      })
     }
-  })
-}
+    else{
+      controlsCalculatorOff.start({
+        opacity: [0,1],
+        transition: {
+          duration: 1
+        }
+      })
+    }
+},[on])
+
 
   return (
     <AnimatePresence>
@@ -188,7 +200,7 @@ else{
       animate = {calculatorAnimator.calculatorOnButton.animate}
       transition={calculatorAnimator.calculatorOnButton.transition}
      exit={calculatorAnimator.calculatorOnButton.exit}
-     onClick = {handleOnCalculatorButton} className=" transition-all duration-300 active:scale-110 px-20 py-1 rounded-full fixed top-[50dvh] left-[13dvw] z-40 bg-gradient-to-b  via-gray-700 text-zinc-50 font-semibold cursor-pointer"> Switch Calculator On</motion.div>
+     onClick = {handleOnCalculatorButton} className="  text-center whitespace-nowrap transition-all duration-300 active:scale-110  py-1 rounded-full fixed top-[50dvh] right-4 left-4 z-40 bg-gradient-to-b  via-gray-700 text-zinc-50 font-semibold text-lg cursor-pointer"> Switch Calculator On</motion.div>
      } 
       <motion.div
       animate = {controlsCalculatorOff}
@@ -230,7 +242,7 @@ else{
               </button>
             </div>
           </motion.div>
-          <div className="flex  ml-[7dvh] md:ml-[10dvh] lg:ml-[20dvh] xl:ml-[28dvh] mt-[15%] sm:mt-[12%] md:mt-[8%] lg:mt-[5%]">
+          <div className="flex ml-[9dvw] md:ml-[10dvh] lg:ml-[20dvh] xl:ml-[28dvh] mt-[15%] sm:mt-[12%] md:mt-[8%] lg:mt-[5%]">
             {/* opreations and numbers buttons */}
             <motion.div 
             initial = {calculatorAnimator.calculatorButtons.initial}
