@@ -52,19 +52,26 @@ export const calculatorAnimator = {
             delay:0.5,
             duration: 1
         },
-        exit: {}
+        exit: {
+            opacity: [1,0]
+        }
     },
 
     calculatorOff : {
          initial :{
-            opacity: 1
+            opacity: 0
          },
          animate: {
-            opacity: [1,0]
+            opacity: [0,1]
          },
          transition: {
-            duration: 1
+    
          },
+         exit: {
+            opacity: [1,0]
+         }
 
     }
 }
+// note AnimatePrescence only works for the element inside it 
+// if the element inside  it is conditionally rendered

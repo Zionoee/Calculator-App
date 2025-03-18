@@ -24,9 +24,9 @@ setCurrentPage((prev)=> prev - 1)
 
     return(<div  className="pt-[12dvh] w-screen min-h-screen h-fit relative bg-gray-300">
        {
-        history.length === 0 && <div className="cursor-pointer absolute text-2xl font-bold text-stone-500 tracking-widest top-[48dvh] left-[31dvw] ">
-        <p>No History Yet</p>
-        <p className="text-sm text-center tracking-wide">Calculate to create one</p>
+        history.length === 0 && <div className=" cursor-pointer absolute text-2xl font-bold text-stone-500 tracking-widest top-[48dvh] left-[2dvw] right-[2dvw] pl-0">
+        <p className="  mx-auto w-fit">No History Yet</p>
+        <p className=" mx-auto w-fit text-sm  tracking-wide">Calculate to create one</p>
     </div>
        } 
         <div className=" w-screen h-34  min-h-[88dvh] relative">
