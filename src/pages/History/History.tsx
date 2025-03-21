@@ -32,7 +32,7 @@ setCurrentPage((prev)=> prev - 1)
         <div className=" w-screen h-34  min-h-[88dvh] relative">
             <div className="border-b border-b-green-700 h-[12dvh] flex flex-col justify-center items-center">
                 <Link to = "/"><button className="transition-all duration-300 hover:scale-110 cursor-pointer text-gray-600 absolute right-5 top-4"><FaCalculator size= {24}/></button></Link>
-                <button onClick={()=>{dispatch(ClearHistory())}} className=" mt-8 transition-all duration-300 hover:scale-105 px-20 py-2 rounded-full cursor-pointer bg-gradient-to-b from-gray-300 via-gray-500 to-gray-300 text-gray-300 font-semibold">Clear History</button>
+                <button onClick={()=>{dispatch(ClearHistory())}} className=" mt-8 transition-all duration-300 hover:scale-105 px-20 py-2 lg:px-40 lg:py-3 rounded-full cursor-pointer bg-gradient-to-b from-gray-300 via-gray-500 to-gray-300 text-gray-300 font-semibold ">Clear History</button>
             </div>
             {/* <div className="h-[6dvh] flex justify-center items-center font-semibold  text-stone-500 text-2xl  border-b-2 border-b-green-700"><p>Today</p></div> */}
             {

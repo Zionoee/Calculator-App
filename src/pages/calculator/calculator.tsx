@@ -268,7 +268,7 @@ export const Calculator = () => {
               {currentValue}
             </p>
             <Link to="/history">
-              <div className="transition-all duration-300 absolute top-3 right-2 cursor-pointer hover:scale-110">
+              <div className=" transition-all duration-300 absolute top-3 right-2 cursor-pointer hover:scale-110">
                 <FaHistory size={24} />
               </div>
             </Link>
@@ -292,13 +292,13 @@ export const Calculator = () => {
               <div>
                 <button
                   onClick={handleClear}
-                  className="transition-all duration-300 hover:scale-105 hover:bg-red-600 ml-6 py-2 px-4 md:px-7 md:py-3 cursor-pointer rounded-full bg-red-800 text-white font-mono"
+                  className="sm:px-6 sm:py-3 transition-all duration-300 hover:scale-105 hover:bg-red-600 ml-6 py-2 px-4 md:px-7 md:py-3 cursor-pointer rounded-full bg-red-800 text-white font-mono"
                 >
                   <p>Clear</p>
                 </button>
                 <button
                   onClick={handleDel}
-                  className="md:px-7 md:py-3 transition-all duration-300 hover:scale-105 hover:bg-red-600 ml-2 sm:ml-4 py-2 px-4 cursor-pointer rounded-full bg-red-800 text-white font-mono"
+                  className="md:px-7 md:py-3 transition-all duration-300 hover:scale-105 hover:bg-red-600 ml-2 sm:ml-4 sm:px-6 sm:py-3 py-2 px-4 cursor-pointer rounded-full bg-red-800 text-white font-mono"
                 >
                   Del
                 </button>
@@ -306,7 +306,7 @@ export const Calculator = () => {
               <div>
                 <button
                   onClick={handleSwitchOff}
-                  className=" transition-all duration-300 hover:scale-105 hover:bg-green-600 mr-6 py-2 px-7.5 md:px-10.5 md:py-3 cursor-pointer rounded-full bg-green-800 text-white font-mono"
+                  className="sm:px-9.5 sm:py-3 transition-all duration-300 hover:scale-105 hover:bg-green-600 mr-6 py-2 px-7.5 md:px-10.5 md:py-3 cursor-pointer rounded-full bg-green-800 text-white font-mono"
                 >
                   <p>OFF</p>
                 </button>
@@ -322,7 +322,7 @@ export const Calculator = () => {
               >
                 <button
                   onClick={selectOperation}
-                  className="md:max-w-30 md:h-15 max-w-13 sm:max-w-22 transition-all duration-300 hover:scale-105 cursor-pointer  text-center text-xl text-white bg-gray-600 rounded-lg font-semibold py-2"
+                  className=" md:max-w-30 md:h-15 max-w-13 sm:max-w-22 transition-all duration-300 hover:scale-105 cursor-pointer  text-center text-xl text-white bg-gray-600 rounded-lg font-semibold py-2"
                 >
                   +
                 </button>
